@@ -4,9 +4,9 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
 
 ## Homework 1
 
-### 1. Task Requirements 
+  ### 1. Task Requirements 
 
-### 2. Picture of the setup
+  ### 2. Picture of the setup
 
-### 3. Link to the video showing functionality
-<https://youtu.be/xmOXPku7YBw>
+  ### 3. Link to the video showing functionality
+    <https://youtu.be/xmOXPku7YBw>
