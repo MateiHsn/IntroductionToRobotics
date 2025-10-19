@@ -9,4 +9,4 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   ### 2. Picture of the setup
 
   ### 3. Link to the video showing functionality
-    <https://youtu.be/xmOXPku7YBw>
+  <https://youtu.be/xmOXPku7YBw>
