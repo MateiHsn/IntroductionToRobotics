@@ -20,7 +20,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   5. Wires (for connecting everything)
 
   ### Photos of the setup (includeing design schematic)
-  ![KiCAD schematic]()
+  ![KiCad schematic](/Homework1/KiCadSchematic.png)
   ![Top-down view](/Homework1/top_down_view.jpg)
   ![Side view](/Homework1/side_view.jpg)
 
