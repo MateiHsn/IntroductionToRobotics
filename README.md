@@ -19,8 +19,10 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   4. A couple resistors (for current limiting)
   5. Wires (for connecting everything)
 
-  ### Photos of the setup (includeing design schematic)
+  ### Photos of the setup (including design schematic)
+  Initially, I created the following schematic in KiCad so I could easily assemble the final circuit:
   ![KiCad schematic](/Homework1/KiCadSchematic.png)
+  The final form of the circuit is visible in the following images:
   ![Top-down view](/Homework1/top_down_view.jpg)
   ![Side view](/Homework1/side_view.jpg)
 
