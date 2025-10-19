@@ -2,25 +2,20 @@
 
 This repo is dedicated to the Introduction to Robotics lab homeworks, taken in the 3rd year at the Faculty of Mathematics and Computer Science, University of Bucharest. Each main part is dedicated to each lab homework and will include requirements, implementation details, code and various image files.
 
-  <details>
-  
-    <summary>
-    
-      <h2> Homework 1 </h2>
-  
-    </summary>
-  
-  ### 1. Task Requirements 
+<details>
+<summary>
 
-  This homework requires the design of a circuit that includes an Arduino Uno R3, an RGB LED, 3 potentiometers, a couple of resistors and wires to connect everything together. The circuit will be used to dim the RGB LED, resulting in a wide spectrum of colors and intensities, based on the position of each pot's cursor.
+  ## Homework 1
+  
+</summary>
 
-  ### 2. Picture of the setup
-  
-  ![](/Homework1/top_down_view.jpg)
-  
-  ![](/Homework1/side_view.jpg)
-  
-  ### 3. Link to the video showing functionality
-  
-  <https://youtu.be/xmOXPku7YBw>
-  </details>
+  ### Task requirements:
+  - Control each color of the RGB LED using 3 potentiometers that are hooked up to an Arduino, which will map the read values to the LED pins.
+
+  #### Components needed:
+  1. Arduino Uno
+  2. 3 potentiometers
+  3. 1 RGB LED
+  4. A couple resistors (for current limiting)
+  5. Wires (for connecting everything)
+</details>
