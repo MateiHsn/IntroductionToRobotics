@@ -26,6 +26,8 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   Initially, I created the following schematic in KiCad so I could easily assemble the final circuit:
   
   ![KiCad schematic](/Homework1/KiCadSchematic.png)
+
+  I chose to use 5 100 ohm resistors since the calculations for each LED gave me a value of 120 ohms for the green and blue LED respectively and a value of 150 ohms for the red one. Since I didn't have the appropriate value for all of them, I decided to group resistors in series and parallel to get a desirable result. 
   
   The final form of the circuit is visible in the following images:
   
