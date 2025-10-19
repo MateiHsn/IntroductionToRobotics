@@ -7,6 +7,6 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   ### 1. Task Requirements 
 
   ### 2. Picture of the setup
-  ![/Homework1/vedere_top_down.jpg]
+  ![](/Homework1/vedere_top_down.jpg)
   ### 3. Link to the video showing functionality
   <https://youtu.be/xmOXPku7YBw>
