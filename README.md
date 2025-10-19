@@ -12,8 +12,9 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
     ### Task requirements:
   
     Control each color of the RGB LED using 3 potentiometers that are hooked up to an Arduino, which will map the read values to the LED pins.
-  </details>
+
   ### Components needed:
+  
   1. Arduino Uno
   2. 3 potentiometers
   3. 1 RGB LED
