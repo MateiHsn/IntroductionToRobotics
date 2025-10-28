@@ -35,8 +35,41 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   ![Side view](/Homework1/side_view.jpg)
 
+  <details>
+<summary>
+
+  ## Homework 2
+  
+</summary>
+  
+  ### Task requirements
+  
+
+
+  ### Components needed:
+  
+  1. Arduino Uno
+  2. 5x LEDs (2 for pedestrians, 3 for cars)
+  3. 1 buzzer
+  4. 7 - segment display
+  5. Wires & resistors as needed
+
+  ### Photos of the setup (including design schematic)
+  
+  Initially, I created the following schematic in KiCad so I could easily assemble the final circuit:
+  
+  ![KiCad schematic](/Homework2/KiCad_Schematic.png)
+
+
+  
+  The final form of the circuit is visible in the following images:
+  
+  ![Top-down view](/Homework2/top_down_view.jpg)
+  
+  ![Side view](/Homework2/side_view.jpg)
+
   ### Youtube video showcasing functionality
   
-  [Video Link](https://youtu.be/xmOXPku7YBw)
+  [Video Link]()
 
 </details>
