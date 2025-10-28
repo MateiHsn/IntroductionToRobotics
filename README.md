@@ -60,14 +60,12 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   Initially, I created the following schematic in KiCad so I could easily assemble the final circuit:
   
   ![KiCad schematic](/Homework2/KiCad_Schematic.png)
-
-
   
   The final form of the circuit is visible in the following images:
   
-  ![Top-down view](/Homework2/top_down_view.jpg)
+  ![Top-down view](/Homework2/top_down_view.jpeg)
   
-  ![Side view](/Homework2/side_view.jpg)
+  ![Side view](/Homework2/side_view.jpeg)
 
   ### Youtube video showcasing functionality
   
