@@ -35,6 +35,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   ![Side view](/Homework1/side_view.jpg)
 
+</details>
   <details>
 <summary>
 
