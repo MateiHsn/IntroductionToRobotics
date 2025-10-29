@@ -11,7 +11,7 @@ unsigned long stateStartTime = 0;
 
 const unsigned long buzzerGoPeriod = 500;
 const unsigned long buzzerWarningPeriod = 250;
-const int buzzerFrequency = 1000;
+const int buzzerFrequency = 2000;
 
 const unsigned long lightFlashPeriod = 250;
 bool lightFlashState = false;
@@ -40,7 +40,7 @@ const int COUNTER_F_PIN = 9;
 const int COUNTER_G_PIN = 2;
 
 // traffic state delays (in milliseconds)
-const unsigned long millisInASeconds = 1000;
+const unsigned long millisInASecond = 1000;
 const unsigned long changeState1To2Time = 8000;
 const unsigned long changeState2To3Time = 3000;
 const unsigned long changeState3To4Time = 8000;
@@ -120,7 +120,7 @@ void loop() {
         stateStartTime = millis();
       }
 
-      numberToDisplay = (changeState2To3Time -  (millis() - stateStartTime)) / millisInASeconds;
+      numberToDisplay = (changeState2To3Time -  (millis() - stateStartTime)) / millisInASecond;
       displayNumbers(numberToDisplay);
 
       break;
@@ -134,7 +134,7 @@ void loop() {
       digitalWrite(CAR_YELLOW_PIN, LOW);
       digitalWrite(CAR_GREEN_PIN, LOW);
 
-      numberToDisplay = (changeState3To4Time -  (millis() - stateStartTime)) / millisInASeconds;
+      numberToDisplay = (changeState3To4Time -  (millis() - stateStartTime)) / millisInASecond;
       displayNumbers(numberToDisplay);
 
       if ( millis() - currentBuzzTime > buzzerGoPeriod) {
@@ -156,7 +156,7 @@ void loop() {
 
     case 4:
 
-      numberToDisplay = (changeState4To1Time -  (millis() - stateStartTime)) / millisInASeconds;
+      numberToDisplay = (changeState4To1Time -  (millis() - stateStartTime)) / millisInASecond;
       displayNumbers(numberToDisplay);
 
       if ( millis() - currentFlashTime > lightFlashPeriod) {
@@ -301,7 +301,7 @@ void displayNumbers(unsigned long numberToDisplay) {
 void handleInterrupt() {
   static unsigned long interruptTime = 0;
   interruptTime = micros();
-  if (interruptTime - lastInterruptTime > debounceDelay * 1000) {
+  if (interruptTime - lastInterruptTime > debounceDelay * millisInASecond) {
     buttonPressed = true;
   }
   lastInterruptTime = interruptTime;
