@@ -60,6 +60,10 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   Initially, I created the following schematic in KiCad so I could easily assemble the final circuit:
   
   ![KiCad schematic](/Homework2/KiCad_Schematic.png)
+
+  Using the KiCad schematic, I implemented the circuit in Tinkercad first, resulting in the following system:
+
+  ![Tinkercad system](/Homework2/Tinkercad_image.jpg)
   
   The final form of the circuit is visible in the following images:
   
