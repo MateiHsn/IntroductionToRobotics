@@ -45,8 +45,14 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   ### Task requirements
   
+  Create a traffic light system that respects 4 different states:
+    1. Idle: the system waits for a button press to start the cycle (pedestrians are not allowed to cross)
+    2. Transition: starts after an 8 second delay after the button press in state 1 (cars' yellow light turns on, signaling them to stop)
+    3. Pedestrians Go (pedestrians get the green light and a buzzer signal, cars have to stop)
+    4. Warning (the green light and the buzzer start blinking; pedestrians have to speed up)   
 
-
+  The code respects these 4 states using a switch instruction as well as a variable that stores the current state (called trafficState) so there won't be any issues where the system could accidentally enter an unwanted state. 
+  Aditionally, 2 functions were used besides the main loop & setup functions for displaying numbers on the 7-segment display (called displayNumbers) and for handleing the interrupt from the button to start the state cycle (conveniently called handleInterrupt).
   ### Components needed:
   
   1. Arduino Uno
