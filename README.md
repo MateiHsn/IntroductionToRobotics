@@ -104,10 +104,10 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
 
   ### Schematics and photos of the setup
 
-  ![KiCad schematic]()
-  ![Tinkercad Model]()
-  ![Top-Down View]()
-  ![Side View]()
+  ![KiCad schematic](Homework3/KiCad_Schematic.png)
+  ![Tinkercad Model](Homework3/Tinkercad_Model.png)
+  ![Top-Down View](Homework3/Top_down_view.jpeg)
+  ![Side View](Homework3/Side_view.jpeg)
 
   ### Youtube video showcasing functionality
   [Video Link]()
