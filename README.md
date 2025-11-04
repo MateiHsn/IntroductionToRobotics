@@ -82,3 +82,12 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   [Video Link](https://youtu.be/Zlj6oTO0wZQ)
 
 </details>
+
+<details>
+  <summary>
+   
+  ### Homework 3
+  
+  </summary>
+  
+</details>
