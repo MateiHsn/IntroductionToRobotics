@@ -21,7 +21,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   4. A couple resistors (for current limiting)
   5. Wires (for connecting everything)
 
-  ### Photos of the setup (including design schematic)
+  ### Schematics and photos of the setup
   
   Initially, I created the following schematic in KiCad so I could easily assemble the final circuit:
   
@@ -61,7 +61,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   4. 7 - segment display
   5. Wires & resistors as needed
 
-  ### Photos of the setup (including design schematic)
+  ### Schematics and photos of the setup
   
   Initially, I created the following schematic in KiCad so I could easily assemble the final circuit:
   
@@ -89,5 +89,27 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   ### Homework 3
   
   </summary>
+
+  ### Task requirements
+
+  Design and implement a simple home alarm system controlled via the Serial Monitor. The system cand be armed or disarmed and can respond to multiple commands including testing the alarm and changing each parameter of the system. Normally, when an intrusion is detected, an alarm sequence should play out.
+
+  ### Components needed:
+  1. Ultrasonic sensor (HC-SR04 or equivalent)
+  2. Photoresistor (LDR)
+  3. Buzzer
+  4. Red LED
+  5. Green LED
+  6. Resistors and jumpers as needed
+
+  ### Schematics and photos of the setup
+
+  ![KiCad schematic]()
+  ![Tinkercad Model]()
+  ![Top-Down View]()
+  ![Side View]()
+
+  ### Youtube video showcasing functionality
+  [Video Link]()
   
 </details>
