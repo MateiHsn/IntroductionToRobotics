@@ -1,48 +1,48 @@
 /*
- * HOME ALARM SYSTEM - General Working Principle
- * 
- * This alarm system operates as a state machine with serial menu-based control.
- * 
- * SYSTEM STATES:
- * - DISARMED: Default state, green LED on, sensors inactive
- * - ARMING: 3-second countdown transition state
- * - ARMED: Sensors active, green LED pulses briefly every second
- * - ALARM_TRIGGERED: Red LED flashing, buzzer sounding, awaiting password
- * 
- * CORE FUNCTIONALITY:
- * 1. Startup Calibration: System measures baseline distance over 3 seconds to establish
- *    normal environment state for ultrasonic sensor
- * 
- * 2. Arming Methods:
- *    - Manual: User selects "Arm System" from menu, 3-second countdown begins
- *    - Automatic: LDR detects light level below threshold (night mode)
- * 
- * 3. Intrusion Detection (when armed):
- *    - Ultrasonic sensor continuously monitors distance changes
- *    - If distance change exceeds sensitivity threshold, alarm triggers after 3-second delay
- * 
- * 4. Alarm Response:
- *    - Red LED flashes at 500ms intervals
- *    - Buzzer sounds at configured frequency synchronized with LED
- *    - System prompts for password via Serial Monitor
- *    - Correct password disarms system and stops alarm
- * 
- * 5. Menu System:
- *    - All interaction via Serial Monitor with text-based menus
- *    - Main menu options change based on armed/disarmed state
- *    - Settings submenu allows configuration of all parameters
- *    - Password change requires verification of current password first
- * 
- * TIMING ARCHITECTURE:
- * - Uses millis() exclusively for non-blocking timing
- * - Independent timers for LED flashing, sensor polling, and state transitions
- * - No delay() calls in main loop to maintain responsiveness
- * 
- * INPUT HANDLING:
- * - Serial input buffered character-by-character until newline
- * - Input context determined by current state and menu level
- * - Password verification and setting changes handled through state flags
- */
+   HOME ALARM SYSTEM - General Working Principle
+
+   This alarm system operates as a state machine with serial menu-based control.
+
+   SYSTEM STATES:
+   - DISARMED: Default state, green LED on, sensors inactive
+   - ARMING: 3-second countdown transition state
+   - ARMED: Sensors active, green LED pulses briefly every second
+   - ALARM_TRIGGERED: Red LED flashing, buzzer sounding, awaiting password
+
+   CORE FUNCTIONALITY:
+   1. Startup Calibration: System measures baseline distance over 3 seconds to establish
+      normal environment state for ultrasonic sensor
+
+   2. Arming Methods:
+      - Manual: User selects "Arm System" from menu, 3-second countdown begins
+      - Automatic: LDR detects light level below threshold (night mode)
+
+   3. Intrusion Detection (when armed):
+      - Ultrasonic sensor continuously monitors distance changes
+      - If distance change exceeds sensitivity threshold, alarm triggers after 3-second delay
+
+   4. Alarm Response:
+      - Red LED flashes at 500ms intervals
+      - Buzzer sounds at configured frequency synchronized with LED
+      - System prompts for password via Serial Monitor
+      - Correct password disarms system and stops alarm
+
+   5. Menu System:
+      - All interaction via Serial Monitor with text-based menus
+      - Main menu options change based on armed/disarmed state
+      - Settings submenu allows configuration of all parameters
+      - Password change requires verification of current password first
+
+   TIMING ARCHITECTURE:
+   - Uses millis() exclusively for non-blocking timing
+   - Independent timers for LED flashing, sensor polling, and state transitions
+   - No delay() calls in main loop to maintain responsiveness
+
+   INPUT HANDLING:
+   - Serial input buffered character-by-character until newline
+   - Input context determined by current state and menu level
+   - Password verification and setting changes handled through state flags
+*/
 
 // Pin definitions
 const int PHOTOSENSOR_PIN = A0;
@@ -56,7 +56,7 @@ const int GREEN_LED_PIN = 12;
 String systemName = "Alarm :P";
 String password = "0000";
 int ultrasonicSensitivity = 10; // cm tolerance
-int ldrThreshold = 400; // Light threshold for auto-arm
+int ldrThreshold = 300; // Light threshold for auto-arm
 int buzzerFrequency = 2000; // Hz
 const int passwordLength = 4;
 
@@ -118,22 +118,22 @@ void setup() {
   pinMode(GREEN_LED_PIN, OUTPUT);
 
   Serial.begin(9600);
-  
+
   // Startup message
   Serial.println(F("\n================================="));
   Serial.print(F("System: "));
   Serial.println(systemName);
   Serial.println(F("================================="));
   Serial.println(F("Calibrating sensors..."));
-  
+
   // Calibrate baseline distance
   calibrateBaseline();
-  
+
   Serial.print(F("Baseline distance: "));
   Serial.print(baselineDistance);
   Serial.println(F(" cm"));
   Serial.println(F("Calibration complete!\n"));
-  
+
   // Show initial status
   digitalWrite(GREEN_LED_PIN, HIGH);
   showMainMenu();
@@ -141,10 +141,10 @@ void setup() {
 
 void loop() {
   handleSerialInput();
-  
+
   // Check LDR for auto-arming
   checkLDRAutoArm();
-  
+
   // Handle state-specific logic
   switch (currentState) {
     case STATE_DISARMED:
@@ -152,15 +152,15 @@ void loop() {
       digitalWrite(RED_LED_PIN, LOW);
       noTone(BUZZER_PIN);
       break;
-      
+
     case STATE_ARMING:
       handleArmingState();
       break;
-      
+
     case STATE_ARMED:
       handleArmedState();
       break;
-      
+
     case STATE_ALARM_TRIGGERED:
       handleAlarmTriggeredState();
       break;
@@ -170,15 +170,17 @@ void loop() {
 void calibrateBaseline() {
   long totalDistance = 0;
   int validSamples = 0;
-  
+
   while (validSamples < distanceSamples) {
     int dist = measureDistance();
-    if (dist > 0 && dist < 400) { // Valid range
+    if (dist > 0) { // Valid range
       totalDistance += dist;
       validSamples++;
     }
   }
-  
+
+  baselineDistance = totalDistance / distanceSamples;
+
 }
 
 int measureDistance() {
@@ -187,12 +189,14 @@ int measureDistance() {
   digitalWrite(TRIGGER_PIN, HIGH);
   delayMicroseconds(10);
   digitalWrite(TRIGGER_PIN, LOW);
+
+  long duration = pulseIn(ECHO_PIN, HIGH); // 30ms timeout
   
-  long duration = pulseIn(ECHO_PIN, HIGH, echoPinTimeout); // 30ms timeout
-  if (duration == 0) return -1; // No echo
   
+
   int distance = duration * speedOfSound / 2;
   return distance;
+  
 }
 
 void checkLDRAutoArm() {
@@ -222,7 +226,7 @@ void handleArmedState() {
   } else if (currentTime - lastFlashTime >= armedFlashOnTime) {
     digitalWrite(RED_LED_PIN, LOW);
   }
-  
+
   // Update sensor check time
   if (currentTime - lastSensorCheckTime >= 200) {
     lastSensorCheckTime = currentTime;
@@ -232,14 +236,14 @@ void handleArmedState() {
 
 void handleAlarmTriggeredState() {
   unsigned long currentTime = millis();
-  
+
   // Flash red LED
   if (currentTime - lastFlashTime >= flashPeriod) {
     lastFlashTime = currentTime;
     ledState = !ledState;
     digitalWrite(RED_LED_PIN, ledState);
   }
-  
+
   // Buzzer logic
   if (ledState) {
     tone(BUZZER_PIN, buzzerFrequency);
@@ -264,7 +268,7 @@ void triggerAlarm() {
     Serial.println(F("\n!!! INTRUSION DETECTED !!!"));
     Serial.println(F("Alarm will sound in 3 seconds..."));
     delay(alarmTriggerDelay); // Brief delay before alarm
-    
+
     currentState = STATE_ALARM_TRIGGERED;
     lastFlashTime = millis();
     Serial.println(F("Enter password to disarm:"));
@@ -290,7 +294,7 @@ void disarmSystem() {
 void testAlarm() {
   Serial.println(F("\n[TEST MODE] Testing alarm for 5 seconds..."));
   unsigned long testStart = millis();
-  
+
   while (millis() - testStart < 5000) {
     unsigned long currentTime = millis();
     if (currentTime - lastFlashTime >= flashPeriod) {
@@ -304,7 +308,7 @@ void testAlarm() {
       }
     }
   }
-  
+
   digitalWrite(RED_LED_PIN, LOW);
   noTone(BUZZER_PIN);
   Serial.println(F("[TEST MODE] Test complete."));
@@ -341,7 +345,7 @@ void showSettingsMenu() {
 void handleSerialInput() {
   while (Serial.available() > 0) {
     char incomingChar = Serial.read();
-    
+
     // Ignore newlines and carriage returns in buffer building
     if (incomingChar == '\n' || incomingChar == '\r') {
       if (inputBuffer.length() > 0) {
@@ -350,18 +354,18 @@ void handleSerialInput() {
       }
       continue;
     }
-    
+
     inputBuffer += incomingChar;
   }
 }
 
 void processInput() {
   inputBuffer.trim();
-  
+
   if (inputBuffer.length() == 0) return;
-  
+
   Serial.println(inputBuffer); // Echo the input
-  
+
   // Handle password verification for password change
   if (verifyingOldPassword) {
     if (inputBuffer == password) {
@@ -377,7 +381,7 @@ void processInput() {
     inputBuffer = "";
     return;
   }
-  
+
   // Handle new password entry
   if (waitingForPasswordChange) {
     if (inputBuffer.length() == passwordLength && isNumeric(inputBuffer)) {
@@ -391,7 +395,7 @@ void processInput() {
     inputBuffer = "";
     return;
   }
-  
+
   // Handle alarm triggered state (password entry)
   if (currentState == STATE_ALARM_TRIGGERED) {
     if (inputBuffer == password) {
@@ -403,14 +407,14 @@ void processInput() {
     inputBuffer = "";
     return;
   }
-  
+
   // Handle settings menu
   if (inSettingsMenu) {
     handleSettingsInput(inputBuffer);
     inputBuffer = "";
     return;
   }
-  
+
   // Handle main menu
   handleMainMenuInput(inputBuffer);
   inputBuffer = "";
@@ -445,7 +449,7 @@ void handleMainMenuInput(String input) {
 
 void handleSettingsInput(String input) {
   int choice = input.toInt();
-  
+
   switch (choice) {
     case 1:
       Serial.print(F("Enter ultrasonic sensitivity (cm, current: "));
@@ -454,38 +458,38 @@ void handleSettingsInput(String input) {
       // Next input will be the value
       currentSetting = SETTING_ULTRASONIC;
       break;
-      
+
     case 2:
       Serial.print(F("Enter LDR threshold (0-1023, current: "));
       Serial.print(ldrThreshold);
       Serial.print(F("): "));
       currentSetting = SETTING_LDR;
       break;
-      
+
     case 3:
       Serial.print(F("Enter buzzer frequency (Hz, current: "));
       Serial.print(buzzerFrequency);
       Serial.print(F("): "));
       currentSetting = SETTING_BUZZER;
       break;
-      
+
     case 4:
       Serial.print(F("Enter system name (current: "));
       Serial.print(systemName);
       Serial.print(F("): "));
       currentSetting = SETTING_SYSTEM_NAME;
       break;
-      
+
     case 5:
       Serial.print(F("Enter current password: "));
       verifyingOldPassword = true;
       break;
-      
+
     case 6:
       inSettingsMenu = false;
       showMainMenu();
       break;
-      
+
     default:
       // Check if we're receiving a setting value
       if (currentSetting == SETTING_ULTRASONIC) {
