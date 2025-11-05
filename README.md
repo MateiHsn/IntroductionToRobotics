@@ -110,6 +110,6 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   ![Side View](Homework3/Side_view.jpeg)
 
   ### Youtube video showcasing functionality
-  [Video Link]()
+  [Video Link](https://youtu.be/81CxpTphdrc)
   
 </details>
