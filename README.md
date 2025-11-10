@@ -113,3 +113,38 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   [Video Link](https://youtu.be/81CxpTphdrc)
   
 </details>
+
+<details>
+<summary>
+
+  ## Homework 4
+  
+</summary>
+  
+  ### Task requirements
+  
+
+
+  ### Components needed:
+  
+
+
+  ### Schematics and photos of the setup
+  
+  Initially, I created the following schematic in KiCad so I could easily assemble the final circuit:
+  
+  ![KiCad schematic]()
+
+  
+  
+  The final form of the circuit is visible in the following images:
+  
+  ![Top-down view]()
+  
+  ![Side View]
+
+### Youtube video showcasing functionality
+  
+  [Video Link]()
+
+</details>
