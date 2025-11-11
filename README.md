@@ -139,7 +139,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   The final form of the circuit is visible in the following images:
   
-  ![Top-down view]()
+  ![Top-down view](Homework4/Top_down_view.jpeg)
   
   ![Side View]()
 
