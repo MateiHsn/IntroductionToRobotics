@@ -127,7 +127,12 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
 
   ### Components needed:
   
-
+  1. 74HC595 shift register IC
+  2. Joystick module
+  3. Pushbotton
+  4. Buzzer
+  5. 2 x 100nF Capacitors for physical debouncing
+  6. Jumper wires and resistors as needed
 
   ### Schematics and photos of the setup
   
@@ -135,7 +140,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   ![KiCad schematic](Homework4/tema4_schematic.png)
 
-  
+  ![Wokwi schematic]
   
   The final form of the circuit is visible in the following images:
   
