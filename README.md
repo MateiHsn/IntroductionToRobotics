@@ -133,7 +133,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   Initially, I created the following schematic in KiCad so I could easily assemble the final circuit:
   
-  ![KiCad schematic]()
+  ![KiCad schematic](Homework4/tema4_schematic.pdf)
 
   
   
