@@ -145,6 +145,6 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
 
 ### Youtube video showcasing functionality
   
-  [Video Link](https://youtu.be/eOomksFV7Ok)
+  [Video Link](https://youtu.be/J4s3nbRbCSY)
 
 </details>
