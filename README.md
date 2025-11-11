@@ -140,7 +140,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   ![KiCad schematic](Homework4/tema4_schematic.png)
 
-  ![Wokwi schematic]
+  ![Wokwi schematic](Homework4/Wokwi_schematic.png)
   
   The final form of the circuit is visible in the following images:
   
