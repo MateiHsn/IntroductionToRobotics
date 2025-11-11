@@ -141,7 +141,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   ![Top-down view](Homework4/Top_down_view.jpeg)
   
-  ![Side View]()
+  ![Side View](Homework4/Side_view.jpeg)
 
 ### Youtube video showcasing functionality
   
