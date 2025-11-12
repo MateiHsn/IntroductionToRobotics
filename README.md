@@ -129,7 +129,9 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   1. Main Menu - contains the 3 initial options for the game - PLAY, SCORE and STOP
   2. Score Menu - displays the highest score achieved since the game was turned on
   3. Stop - returns the game to the main menu
+     
   After starting the game phase, there are also some secondary states the game was split into:
+  
   1. Sequence display - the target sequence is displayed on the 7-segment display for the player to remember
   2. Input phase - the player is presented with a default input in order to set the input sequence
   3. Result checking - after a long press of the joystick, the input sequence is checked
