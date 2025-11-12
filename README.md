@@ -123,8 +123,19 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   ### Task requirements
   
-
-
+  The subject of project is to design and implement a game that resembles the template of "Simon Says", only in this case, the player is presented with a character sequence on a 4-digit 7-segment display and have to reproduce it by selecting each character using a joystick. The player also has a button that pauses the current state of the game and displays the main menu.
+  Regarding the design of the circuit, the most important part was displaying text on the 7-segment display, which was done using the 74HC595 8-bit SIPO shift register. To effectively control the data outputs of the register, I used SPI for its ease of use and for its transfer speeds.
+  Regarding the actual software implementation of the game, I used a finite-state machine to separate every part of the game from each other. The main state of the game are:
+  1. Main Menu - contains the 3 initial options for the game - PLAY, SCORE and STOP
+  2. Score Menu - displays the highest score achieved since the game was turned on
+  3. Stop - returns the game to the main menu
+  After starting the game phase, there are also some secondary states the game was split into:
+  1. Sequence display - the target sequence is displayed on the 7-segment display for the player to remember
+  2. Input phase - the player is presented with a default input in order to set the input sequence
+  3. Result checking - after a long press of the joystick, the input sequence is checked
+  4. Show result - after checking the input, the player is presented the current score if the input is correct or and error message otherwise.
+  5. Pause - pressing the pause button  
+  
   ### Components needed:
   
   1. 74HC595 shift register IC
