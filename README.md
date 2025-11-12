@@ -148,10 +148,11 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   1. 74HC595 shift register IC
   2. Joystick module
-  3. Pushbotton
-  4. Buzzer
-  5. 2 x 100nF Capacitors for physical debouncing
-  6. Jumper wires and resistors as needed
+  3. SH5461AS common-cathode 4-digit 7-segment display
+  4. Pushbutton
+  5. Buzzer
+  6. 2 x 100nF Capacitors for physical debouncing
+  7. Jumper wires and resistors as needed
 
   ### Schematics and photos of the setup
   
