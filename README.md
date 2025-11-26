@@ -175,6 +175,8 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
 </details>
 
 <details>
+
+  <summary>
   
   ## Homework 5
   
