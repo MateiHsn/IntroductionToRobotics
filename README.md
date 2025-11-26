@@ -173,3 +173,41 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   [Video Link](https://youtu.be/J4s3nbRbCSY)
 
 </details>
+
+  ## Homework 5
+  
+  </summary>
+
+  ### Task requirements
+
+  Design and implement a 2D platformer game constructed using SoC (Separation of Concerns).
+  Initially, I implemented the GameModel class that takes care of the game itself and how it updates based on the player's inputs, which is then controlled by the GameController. THe GameController connects all further classes with eachother, including HardwareManager, which reads inputs and updates outputs, and the classes that inherit IRenderer, which acts as an interface for whatever display the player would like to use (in this case Serial or LCD).
+
+  ### Components needed:
+
+  1. 1x 16x2 LCD (HD44780 or compatible)
+  2. 1x joystick
+  3. 1x push button for Pause
+  4. 3x LEDs for displaying the states of the game
+  5. EEPROM (built-in) for saving the top 3 highest scores
+  6. Buzzer
+  
+  ### Schematics and photos of the setup
+
+  The circuit itself started out as this schematic:
+  
+  ![KiCad schematic](Homework5/KiCad_Schematic.png)
+  
+  I also implemented the circuit in the Wokwi circuit simulator to dispolay a phyisical diagram:
+  
+  ![Tinkercad Model](Homework5/Wokwi_Model.png)
+  
+  The previous diagrams where then used to implement the final circuit:
+  
+  ![Top-Down View](Homework5/Top_down_view.jpeg)
+  ![Side View](Homework5/Side_view.jpeg)
+
+  ### Youtube video showcasing functionality
+  [Video Link](https://youtu.be/pufFJ4CxjFs)
+  
+</details>
