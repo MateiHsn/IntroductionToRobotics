@@ -204,7 +204,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   I also implemented the circuit in the Wokwi circuit simulator to dispolay a phyisical diagram:
   
-  ![Wokwi Model](Homework5/Wokwi_Model.png)
+  ![Wokwi Model](Homework5/Wokwi_model.png)
   
   The previous diagrams where then used to implement the final circuit:
   
