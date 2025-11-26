@@ -209,7 +209,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   The previous diagrams where then used to implement the final circuit:
   
   ![Top-Down View](Homework5/Top_down_view.jpeg)
-  ![Side View](Homework5/Side_view.jpeg)
+  ![Side View](Homework5/SIde_view.jpeg)
 
   ### Youtube video showcasing functionality
   [Video Link](https://youtu.be/pufFJ4CxjFs)
