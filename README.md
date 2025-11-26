@@ -200,7 +200,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
 
   The circuit itself started out as this schematic:
   
-  ![KiCad schematic](Homework5/KiCad_Schematic.png)
+  ![KiCad schematic](Homework5/Tema5_schematic.png)
   
   I also implemented the circuit in the Wokwi circuit simulator to dispolay a phyisical diagram:
   
