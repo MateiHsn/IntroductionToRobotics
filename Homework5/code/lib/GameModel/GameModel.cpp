@@ -294,7 +294,7 @@ void GameModel::calculateRoomClearBonus() {
     
     if (elapsedTime == 0) elapsedTime = 1; // Avoid division by zero
     
-    unsigned int bonus = BASE_ROOM_CLEAR_POINTS / elapsedTime;
+    unsigned int bonus = BASE_ROOM_CLEAR_POINTS - elapsedTime;
     if (bonus < 1) bonus = 1; // Minimum bonus
     
     addScore(bonus);
