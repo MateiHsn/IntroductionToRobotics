@@ -5,7 +5,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
 <details>
 <summary>
 
-  ## Homework 1
+  ## Project 1
   
 </summary>
   
@@ -25,21 +25,21 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   Initially, I created the following schematic in KiCad so I could easily assemble the final circuit:
   
-  ![KiCad schematic](/Homework1/KiCadSchematic.png)
+  ![KiCad schematic](/Project1/KiCadSchematic.png)
 
   I chose to use 5 100 ohm resistors since the calculations for each LED gave me a value of 120 ohms for the green and blue LED respectively and a value of 160 ohms for the red one. Since I didn't have the appropriate value for all of them, I decided to group resistors in series and parallel to get a desirable and relatively close result. 
   
   The final form of the circuit is visible in the following images:
   
-  ![Top-down view](/Homework1/top_down_view.jpg)
+  ![Top-down view](/Project1/top_down_view.jpg)
   
-  ![Side view](/Homework1/side_view.jpg)
+  ![Side view](/Project1/side_view.jpg)
 
 </details>
   <details>
 <summary>
 
-  ## Homework 2
+  ## Project 2
   
 </summary>
   
@@ -65,17 +65,17 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   Initially, I created the following schematic in KiCad so I could easily assemble the final circuit:
   
-  ![KiCad schematic](/Homework2/KiCad_Schematic.png)
+  ![KiCad schematic](/Project2/KiCad_Schematic.png)
 
   Using the KiCad schematic, I implemented the circuit in Tinkercad first, resulting in the following system:
 
-  ![Tinkercad system](/Homework2/Tinkercad_image.jpg)
+  ![Tinkercad system](/Project2/Tinkercad_image.jpg)
   
   The final form of the circuit is visible in the following images:
   
-  ![Top-down view](/Homework2/top_down_view.jpeg)
+  ![Top-down view](/Project2/top_down_view.jpeg)
   
-  ![Side view](/Homework2/side_view.jpeg)
+  ![Side view](/Project2/side_view.jpeg)
 
   ### Youtube video showcasing functionality
   
@@ -86,7 +86,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
 <details>
   <summary>
    
-  ## Homework 3
+  ## Project 3
   
   </summary>
 
@@ -104,10 +104,10 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
 
   ### Schematics and photos of the setup
 
-  ![KiCad schematic](Homework3/KiCad_Schematic.png)
-  ![Tinkercad Model](Homework3/Tinkercad_Model.png)
-  ![Top-Down View](Homework3/Top_down_view.jpeg)
-  ![Side View](Homework3/Side_view.jpeg)
+  ![KiCad schematic](Project3/KiCad_Schematic.png)
+  ![Tinkercad Model](Project3/Tinkercad_Model.png)
+  ![Top-Down View](Project3/Top_down_view.jpeg)
+  ![Side View](Project3/Side_view.jpeg)
 
   ### Youtube video showcasing functionality
   [Video Link](https://youtu.be/81CxpTphdrc)
@@ -117,7 +117,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
 <details>
 <summary>
 
-  ## Homework 4
+  ## Project 4
   
 </summary>
   
@@ -158,15 +158,15 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   Initially, I created the following schematic in KiCad so I could easily assemble the final circuit:
   
-  ![KiCad schematic](Homework4/tema4_schematic.png)
+  ![KiCad schematic](Project4/tema4_schematic.png)
 
-  ![Wokwi schematic](Homework4/Wokwi_schematic.png)
+  ![Wokwi schematic](Project4/Wokwi_schematic.png)
   
   The final form of the circuit is visible in the following images:
   
-  ![Top-down view](Homework4/Top_down_view.jpeg)
+  ![Top-down view](Project4/Top_down_view.jpeg)
   
-  ![Side View](Homework4/Side_view.jpeg)
+  ![Side View](Project4/Side_view.jpeg)
 
 ### Youtube video showcasing functionality
   
@@ -178,7 +178,7 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
 
   <summary>
   
-  ## Homework 5
+  ## Project 5
   
   </summary>
 
@@ -200,16 +200,16 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
 
   The circuit itself started out as this schematic:
   
-  ![KiCad schematic](Homework5/Tema5_schematic.png)
+  ![KiCad schematic](Project5/Tema5_schematic.png)
   
   I also implemented the circuit in the Wokwi circuit simulator to dispolay a phyisical diagram:
   
-  ![Wokwi Model](Homework5/Wokwi_model.png)
+  ![Wokwi Model](Project5/Wokwi_model.png)
   
   The previous diagrams where then used to implement the final circuit:
   
-  ![Top-Down View](Homework5/Top_down_view.jpeg)
-  ![Side View](Homework5/SIde_view.jpeg)
+  ![Top-Down View](Project5/Top_down_view.jpeg)
+  ![Side View](Project5/SIde_view.jpeg)
 
   ### Youtube video showcasing functionality
   [Video Link](https://youtu.be/pufFJ4CxjFs)
