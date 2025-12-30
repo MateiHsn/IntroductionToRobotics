@@ -158,15 +158,15 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
   
   Initially, I created the following schematic in KiCad so I could easily assemble the final circuit:
   
-  ![KiCad schematic](Project4/tema4_schematic.png)
+  ![KiCad schematic](Project 4/tema4_schematic.png)
 
-  ![Wokwi schematic](Project4/Wokwi_schematic.png)
+  ![Wokwi schematic](Project 4/Wokwi_schematic.png)
   
   The final form of the circuit is visible in the following images:
   
-  ![Top-down view](Project4/Top_down_view.jpeg)
+  ![Top-down view](Project 4/Top_down_view.jpeg)
   
-  ![Side View](Project4/Side_view.jpeg)
+  ![Side View](Project 4/Side_view.jpeg)
 
 ### Youtube video showcasing functionality
   
@@ -200,16 +200,16 @@ This repo is dedicated to the Introduction to Robotics lab homeworks, taken in t
 
   The circuit itself started out as this schematic:
   
-  ![KiCad schematic](Project5/Tema5_schematic.png)
+  ![KiCad schematic](Project 5/Tema5_schematic.png)
   
   I also implemented the circuit in the Wokwi circuit simulator to dispolay a phyisical diagram:
   
-  ![Wokwi Model](Project5/Wokwi_model.png)
+  ![Wokwi Model](Project 5/Wokwi_model.png)
   
   The previous diagrams where then used to implement the final circuit:
   
-  ![Top-Down View](Project5/Top_down_view.jpeg)
-  ![Side View](Project5/SIde_view.jpeg)
+  ![Top-Down View](Project 5/Top_down_view.jpeg)
+  ![Side View](Project 5/SIde_view.jpeg)
 
   ### Youtube video showcasing functionality
   [Video Link](https://youtu.be/pufFJ4CxjFs)
